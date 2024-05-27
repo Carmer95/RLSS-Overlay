@@ -4,6 +4,8 @@ import { GameInfoContext } from "../contexts/GameInfoContext";
 import { UpdateState } from "../models/UpdateState/UpdateState";
 import { USPlayer } from "../models/UpdateState/USPlayer";
 import { Scorebug } from "../components/Scorebug/Scorebug";
+import { PlayerBoostMeter } from "../components/PlayerBoostMeter/PlayerBoostMeter";
+import { PlayerStatCard } from "../components/PlayerStatCard/PlayerStatCard";
 
 export const Overlay = () => {
     const websocket = useContext(WebsocketContext)
@@ -30,5 +32,9 @@ export const Overlay = () => {
             })
         });
     });
-    return <Scorebug />;
+    return <div>
+        <Scorebug />
+        <PlayerStatCard />
+        <PlayerBoostMeter />
+    </div>
 };

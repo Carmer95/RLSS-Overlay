@@ -9,14 +9,14 @@ export const Scorebug = () => {
     return (
         <TopDiv>
             <ScorebugWrapper>
-                <ScorebugOrange>
-                    ORANGE {"   "} { gameInfo.score.orange }
-                </ScorebugOrange>
-                <ScorebugClock>{ GameService.getClockFromSeconds(gameInfo.timeRemaining, gameInfo.isOT) }
-                </ScorebugClock>
                 <ScorebugBlue>
                     BLUE {"   "} { gameInfo.score.blue }
                 </ScorebugBlue>
+                <ScorebugClock>{ GameService.getClockFromSeconds(gameInfo.timeRemaining, gameInfo.isOT) }
+                </ScorebugClock>
+                <ScorebugOrange>
+                    ORANGE {"   "} { gameInfo.score.orange }
+                </ScorebugOrange>
             </ScorebugWrapper>
         </TopDiv>
     )
