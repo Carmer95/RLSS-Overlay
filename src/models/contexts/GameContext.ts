@@ -1,4 +1,5 @@
 import { USPlayer } from "../UpdateState/USPlayer";
+import { USTeam } from "../UpdateState/USTeam";
 
 export interface GameContext {
     arena: string;
@@ -8,6 +9,7 @@ export interface GameContext {
     timeRemaining: number; // in seconds
     winner: string;
     players: USPlayer[];
+    teams: USTeam[];
     score: {
         blue: number;
         orange: number;

@@ -14,6 +14,7 @@ export const DEFAULT_GAME_INFO: GameContext = {
     timeRemaining: 300, // in seconds
     winner: "",
     players: [],
+    teams: [],
     score: {
         blue: 0,
         orange: 0,

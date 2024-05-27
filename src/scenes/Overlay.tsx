@@ -4,6 +4,7 @@ import { GameInfoContext } from "../contexts/GameInfoContext";
 import { UpdateState } from "../models/UpdateState/UpdateState";
 import { USPlayer } from "../models/UpdateState/USPlayer";
 import { Scorebug } from "../components/Scorebug/Scorebug";
+import { USTeam } from "../models/UpdateState/USTeam";
 
 export const Overlay = () => {
     const websocket = useContext(WebsocketContext)
@@ -14,6 +15,9 @@ export const Overlay = () => {
         const updatedPlayers: USPlayer[] = Object.values(data.players).map(
             (playerInfo: USPlayer) => playerInfo
             );
+        const updatedTeams: USTeam[] = Object.values(data.teams).map(
+            (teamInfo: USTeam) => teamInfo
+            );
 
             setGameInfo({
                 arena: data.game.arena,
@@ -23,6 +27,7 @@ export const Overlay = () => {
                 timeRemaining: data.game.time_seconds,
                 winner: data.game.winner,
                 players: updatedPlayers,
+                teams: updatedTeams,
                 score: {
                     blue: data.game.teams[0].score,
                     orange: data.game.teams[1].score,

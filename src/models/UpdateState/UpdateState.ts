@@ -6,4 +6,5 @@ export interface UpdateState {
     hasGame: boolean;
     match_guid?: string;
     players: Object;
+    teams: Object;
 }
